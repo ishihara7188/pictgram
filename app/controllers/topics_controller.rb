@@ -1,10 +1,17 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)
+
+    # 投稿したcommentを並べるためのアクション（index内のeach文内で使用）
+    @comment = Comment.all
   end
 
   def new
     @topic = Topic.new
+  end
+
+  def show
+    # @post = Post.find_by: params[:id]
   end
 
   def create
