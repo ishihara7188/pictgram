@@ -28,11 +28,11 @@
             </p>
 
             <!-- 投稿されたcommentを一覧で出力するコード -->
-            <% @comment.each do |comment| %> <!-- ここのeach文もこれで良いのか不明 -->
-              <%=  %> <!-- 質問 -->
+            <% @comment.each do |comment| %>
+              <p><%= comment.comment %></p>
             <% end %>
 
-            
+
 
           </div>
         </div>
